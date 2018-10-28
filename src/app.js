@@ -20,29 +20,6 @@ import 'react-dates/lib/css/_datepicker.css';   // Note: import datepicker css u
 
 const store = configureStore();
 
-store.dispatch(addExpense({
-    description: 'Water bill',
-    note: '',
-    amount: 40,
-    createdAt: 500
-}));
-store.dispatch(addExpense({
-    description: 'Gas Bill',
-    note: '',
-    amount: 10,
-    createdAt: 800
-}));
-store.dispatch(addExpense({
-    description: 'Rent',
-    note: '',
-    amount: 1095,
-    createdAt: 200
-}));
-
-const state = store.getState();
-const visibileExpenses = getVisibleExpense(state.expenses, state.filters);
-console.log(visibileExpenses);
-
 // Note: Provider sets the redux store that all our components will have access to
 const jsx = (
     <Provider store={store}>
